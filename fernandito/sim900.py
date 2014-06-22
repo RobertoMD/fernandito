@@ -3,6 +3,7 @@ import sys,os,serial,threading,logging,time
 LF = serial.to_bytes([0x0A])
 CR = serial.to_bytes([0x0D])
 CRLF = serial.to_bytes([13, 10])
+EOF = serial.to_bytes([26])
 PORT  = '/dev/ttyAMA0'
 SPEED = 19200
 
@@ -14,6 +15,8 @@ class SIM900():
 			self.serial=serial.Serial(port,baudrate)
 			logging.debug('Serial port open')
 			self.start()
+			#SMS mode text
+			self.command('AT+CMGF=1')
 		except Exception:
 			logging.debug('Cannot open serial port')
 			self.serial=None
@@ -70,6 +73,15 @@ class SIM900():
 		self.serial.flush()	
 		logging.debug('> '+data)
 		sys.stderr.flush()
+
+	def sendsms(self,dest,text):
+		s='AT+CMGS="'+dest+'"'
+		l=self.command(s)
+		l=l+self.command(text)
+		return l+self.command(EOF)
+
+	def shutdownGSM(self):
+		return self.command('AT+CPOWD=1')
 
 	def command(self,s,timeout=1):
 		self.cleardata()
