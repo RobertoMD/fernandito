@@ -1,4 +1,5 @@
 import sys,os,serial,threading,logging,time
+import shlex
 
 LF = serial.to_bytes([0x0A])
 CR = serial.to_bytes([0x0D])
@@ -17,6 +18,7 @@ class SIM900():
 			self.start()
 			#SMS mode text
 			self.command('AT+CMGF=1')
+			self._awaitingdata=False
 		except Exception:
 			logging.debug('Cannot open serial port')
 			self.serial=None
@@ -50,8 +52,14 @@ class SIM900():
 			while self._readenabled:
 				if self.serial.inWaiting()>0:
 					data=self.serial.read(self.serial.inWaiting())
-					logging.debug('Read '+repr(len(data))+' bytes')
-					self._readbuffer+=data
+					logging.debug('<<< '+repr(len(data))+' bytes')
+					#if answer to command is expected
+					if self._awaitingdata:
+						#append data to existing buffer
+						self._readbuffer+=data
+					#if oob received, process info and do not add this to the buffer
+					else:
+						self.processoobdata(data)
 					sys.stderr.flush()
 				else:
 					time.sleep(1)
@@ -62,6 +70,33 @@ class SIM900():
 			# point...
 			raise
  
+	def processoobdata(self,data):
+		d=data.strip('\r\n')
+		# sms: '+CMTI: "SM",<index>'
+		if d.startswith('+CMTI:'):
+			self.processnewsms()
+		# incoming call: RING
+		elif d.startswith('RING'):
+			self.incomingcall()
+		# incoming call hung: NO CARRIER
+		elif d.startswith('NO CARRIER'):
+			self.incomingcallend()
+		else:
+			logging.debug('Unknown unsolicited data:'+data)
+		pass
+
+	def processnewsms(self):
+		logging.debug('Processing new sms')
+		return
+
+	def incomingcall(self):
+		logging.debug('Incoming call')
+		return
+
+	def incomingcallend(self):
+		logging.debug('Incoming call ended')
+		return
+
 	def writeline(self,s):
 		self.serial.write(s+CRLF)
 		self.serial.flush()
@@ -85,14 +120,28 @@ class SIM900():
 
 	def command(self,s,timeout=1):
 		self.cleardata()
-		logging.debug('> Command '+s)
+		self._awaitingdata=True;
+		logging.debug('>>> '+s)
 		self.serial.write(s+CRLF)
 		#self.serial.flush()
 		# wait for answer to arrive
 		while len(self.peekdata())==0:
 			time.sleep(0.5)
 		time.sleep(timeout)
+		self._awaitingdata=False;
 		l=self.getdata().replace('\r','').split('\n')
 		# remove empty elements (empty lines)
 		return [x for x in l if x]
 
+	def getsms(self):
+		r=self.command('AT+CMGL="ALL",1')
+		l=[]
+		#return if command did not end correctly
+		if len(r)>0:
+			if r[-1]=='OK':
+				for i in range(1,len(r)-2,2):	
+					e=r[i].replace('"','').split(',')
+					e.append(r[i+1])
+					l.append(e)
+		return l
+		
