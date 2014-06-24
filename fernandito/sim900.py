@@ -8,22 +8,37 @@ EOF = serial.to_bytes([26])
 PORT  = '/dev/ttyAMA0'
 SPEED = 19200
 
-logging.basicConfig(stream=sys.stderr,level=logging.DEBUG)
+logging.basicConfig(stream=sys.stderr,level=logging.INFO)
+
 class SIM900():
 	def __init__(self,port=PORT,baudrate=SPEED):
 		self._readbuffer=''
 		try:
+			self._smscache=None
+			self._awaitingdata=False
+			self._imei=None
+			# Open port
 			self.serial=serial.Serial(port,baudrate)
 			logging.debug('Serial port open')
+			# Start read thread
 			self.start()
-			#SMS mode text
+			# SMS mode text
 			self.command('AT+CMGF=1')
-			self._awaitingdata=False
+			# Not currently awaiting data
+			# Create sms cache
+			self.syncsms()
+			# Get IMEI
+			self._imei=self.command('AT+GSN')[1]
+			self._imei=
+			# Get incoming call info
+			self.command('AT+CLCC=1')
+
 		except Exception:
-			logging.debug('Cannot open serial port')
+			logging.critical('Cannot open serial port')
 			self.serial=None
+
 	def start(self):
-		logging.debug('Serial Read enabled')
+		logging.info('Serial Read enabled')
 		self._readenabled=True
 		# reception thread
 		self.rthread = threading.Thread(target=self.reader)
@@ -31,7 +46,7 @@ class SIM900():
 		self.rthread.start()
 
 	def stop(self):
-		logging.debug('Serial Read disabled')
+		logging.info('Serial Read disabled')
 		self._readenabled=False
 		self.rthread.join()
 
@@ -65,36 +80,71 @@ class SIM900():
 					time.sleep(1)
 		except serial.SerialException, e:
 			self._readenabled = False
-			logging.debug('Exception reading serial data. Disabling read')
+			logging.warning('Exception reading serial data. Disabling read')
 			# would be nice if the console reader could be interrupted at this
 			# point...
 			raise
  
+	def syncsms(self):
+			logging.info('Copying SMS to local buffer')
+			self._smscache=self.getsms()
+
 	def processoobdata(self,data):
+		#ojo pueden venir mas de una linea, por ejemplo al arrancar
 		d=data.strip('\r\n')
 		# sms: '+CMTI: "SM",<index>'
 		if d.startswith('+CMTI:'):
-			self.processnewsms()
+			index=data.split(',')[1]
+			self.processnewsms(index)
+		elif d.startswith('+CLCC:'):
+			self._callerid=d.split(',')[5].strip('"')
+			self._callstatus=d.split(',')[2]  # 0-active, 1-held, 2-dialing (MO), 3-alerting (MO), 4-incoming (MT), 5-waiting(MT), 6-disconnect
+			self._calltype=d.split(',')[3]    # 0-voice, 1-data, 2-fax
 		# incoming call: RING
 		elif d.startswith('RING'):
 			self.incomingcall()
 		# incoming call hung: NO CARRIER
 		elif d.startswith('NO CARRIER'):
 			self.incomingcallend()
+		# *PSNWID: "214","03", "Orange", 0, "Orange", 0
+		elif d.startswith('*PSNWID:'):
+			pass
+		#+COPS: (1,"movistar","movistar","21407"),(2,"simyo","","21403"),(1,"vodafone ES","voda ES","21401"),,(0,1,4),(0,1,2)
+		elif d.startswith('+COPS:'):
+			pass
 		else:
-			logging.debug('Unknown unsolicited data:'+data)
+			logging.info('Unknown unsolicited data:'+data)
 		pass
 
-	def processnewsms(self):
-		logging.debug('Processing new sms')
+	def processnewsms(self,index):
+		self.syncsms()
+		if type(index).__name__=='int':
+			index=str(index)
+		logging.info('Processing new sms')
+		logging.debug('SMS Index: '+index)
+		found=False
+		for m in self._smscache:
+			if m[0].split()[1]==index:
+				found=True
+				logging.info('Status:'+m[1])
+				logging.info('Source:'+m[2])
+				logging.info('Date  :'+m[4])
+				logging.info('Time  :'+m[5])
+				logging.info('Text  :'+m[6])
+		if not found:
+			logging.warning('SMS Index ',index,' not found')
 		return
 
 	def incomingcall(self):
-		logging.debug('Incoming call')
+		for i in l:
+			print i
+
+	def incomingcall(self):
+		logging.info('Incoming call')
 		return
 
 	def incomingcallend(self):
-		logging.debug('Incoming call ended')
+		logging.info('Incoming call ended')
 		return
 
 	def writeline(self,s):
@@ -115,13 +165,13 @@ class SIM900():
 		l=l+self.command(text)
 		return l+self.command(EOF)
 
-	def shutdownGSM(self):
+	def shutdown(self):
 		return self.command('AT+CPOWD=1')
 
 	def command(self,s,timeout=1):
 		self.cleardata()
 		self._awaitingdata=True;
-		logging.debug('>>> '+s)
+		logging.info('>>> '+s)
 		self.serial.write(s+CRLF)
 		#self.serial.flush()
 		# wait for answer to arrive
@@ -132,6 +182,11 @@ class SIM900():
 		l=self.getdata().replace('\r','').split('\n')
 		# remove empty elements (empty lines)
 		return [x for x in l if x]
+
+	def iscmdok(self,data):
+		if data[-1]=='OK':
+			return True
+		return False
 
 	def getsms(self):
 		r=self.command('AT+CMGL="ALL",1')
