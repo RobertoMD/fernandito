@@ -1,0 +1,160 @@
+Downloading/unpacking pyserial
+  Getting page https://pypi.python.org/simple/pyserial/
+  URLs to search for versions for pyserial:
+  * https://pypi.python.org/simple/pyserial/
+  Analyzing links from page https://pypi.python.org/simple/pyserial/
+    Skipping link https://pypi.python.org/packages/2.5/p/pyserial/pyserial-2.3-py2.5.egg#md5=e2944f767a14a91058e67f73526b7f2b (from https://pypi.python.org/simple/pyserial/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/p/pyserial/pyserial-2.4-py2.5.egg#md5=80f98ec0ef48a22e1527071c8520b6cc (from https://pypi.python.org/simple/pyserial/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/any/p/pyserial/pyserial-2.5.win32.exe#md5=ea4579b9ad39a4f0171c3ec3da0a8212 (from https://pypi.python.org/simple/pyserial/); unknown archive format: .exe
+    Skipping link https://pypi.python.org/packages/any/p/pyserial/pyserial-2.7.win32.exe#md5=21555387937eeb79126cde25abee4b35 (from https://pypi.python.org/simple/pyserial/); unknown archive format: .exe
+    Skipping link https://pypi.python.org/packages/any/p/pyserial/pyserial-2.7.win32_py3k.exe#md5=c6fb580ae7763671297794b8a1d91c9e (from https://pypi.python.org/simple/pyserial/); unknown archive format: .exe
+    Skipping link https://pypi.python.org/packages/any/p/pyserial/pyserial-py3k-2.5.win32.exe#md5=c7d770dede6f6c6197d9652a7658f18e (from https://pypi.python.org/simple/pyserial/); unknown archive format: .exe
+    Found link https://pypi.python.org/packages/source/p/pyserial/pyserial-2.3.tar.gz#md5=707b884fc180b568e207e3bb69b6ce7d (from https://pypi.python.org/simple/pyserial/), version: 2.3
+    Found link https://pypi.python.org/packages/source/p/pyserial/pyserial-2.4.tar.gz#md5=eec19df59fd75ba5a136992897f8e468 (from https://pypi.python.org/simple/pyserial/), version: 2.4
+    Found link https://pypi.python.org/packages/source/p/pyserial/pyserial-2.5.tar.gz#md5=34340820710239bea2ceca7f43ef8cab (from https://pypi.python.org/simple/pyserial/), version: 2.5
+    Found link https://pypi.python.org/packages/source/p/pyserial/pyserial-2.6.tar.gz#md5=cde799970b7c1ce1f7d6e9ceebe64c98 (from https://pypi.python.org/simple/pyserial/), version: 2.6
+    Found link https://pypi.python.org/packages/source/p/pyserial/pyserial-2.7.tar.gz#md5=794506184df83ef2290de0d18803dd11 (from https://pypi.python.org/simple/pyserial/), version: 2.7
+  Using version 2.7 (newest of versions: 2.7, 2.6, 2.5, 2.4, 2.3)
+  Downloading from URL https://pypi.python.org/packages/source/p/pyserial/pyserial-2.7.tar.gz#md5=794506184df83ef2290de0d18803dd11 (from https://pypi.python.org/simple/pyserial/)
+  Running setup.py (path:/tmp/pip_build_pi/pyserial/setup.py) egg_info for package pyserial
+    running egg_info
+    creating pip-egg-info/pyserial.egg-info
+    writing pip-egg-info/pyserial.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/pyserial.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/pyserial.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/pyserial.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    
+    reading manifest file 'pip-egg-info/pyserial.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/pyserial.egg-info/SOURCES.txt'
+  Source in /tmp/pip_build_pi/pyserial has version 2.7, which satisfies requirement pyserial
+Installing collected packages: pyserial
+  Running setup.py install for pyserial
+    Running command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/pyserial/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-gijo1J-record/install-record.txt --single-version-externally-managed --compile
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-armv6l-2.7
+    creating build/lib.linux-armv6l-2.7/serial
+    copying serial/rfc2217.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/serialutil.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/__init__.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/sermsdos.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/serialwin32.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/serialjava.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/serialcli.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/serialposix.py -> build/lib.linux-armv6l-2.7/serial
+    copying serial/win32.py -> build/lib.linux-armv6l-2.7/serial
+    creating build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/list_ports_windows.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/list_ports.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/__init__.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/list_ports_posix.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/list_ports_osx.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/list_ports_linux.py -> build/lib.linux-armv6l-2.7/serial/tools
+    copying serial/tools/miniterm.py -> build/lib.linux-armv6l-2.7/serial/tools
+    creating build/lib.linux-armv6l-2.7/serial/urlhandler
+    copying serial/urlhandler/__init__.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+    copying serial/urlhandler/protocol_socket.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+    copying serial/urlhandler/protocol_rfc2217.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+    copying serial/urlhandler/protocol_loop.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+    copying serial/urlhandler/protocol_hwgrep.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+    running build_scripts
+    creating build/scripts-2.7
+    copying and adjusting serial/tools/miniterm.py -> build/scripts-2.7
+    changing mode of build/scripts-2.7/miniterm.py from 644 to 755
+    running install_lib
+    creating /usr/local/lib/python2.7/dist-packages/serial
+    error: could not create '/usr/local/lib/python2.7/dist-packages/serial': Permission denied
+    Complete output from command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/pyserial/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-gijo1J-record/install-record.txt --single-version-externally-managed --compile:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.linux-armv6l-2.7
+
+creating build/lib.linux-armv6l-2.7/serial
+
+copying serial/rfc2217.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/serialutil.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/__init__.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/sermsdos.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/serialwin32.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/serialjava.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/serialcli.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/serialposix.py -> build/lib.linux-armv6l-2.7/serial
+
+copying serial/win32.py -> build/lib.linux-armv6l-2.7/serial
+
+creating build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/list_ports_windows.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/list_ports.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/__init__.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/list_ports_posix.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/list_ports_osx.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/list_ports_linux.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+copying serial/tools/miniterm.py -> build/lib.linux-armv6l-2.7/serial/tools
+
+creating build/lib.linux-armv6l-2.7/serial/urlhandler
+
+copying serial/urlhandler/__init__.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+
+copying serial/urlhandler/protocol_socket.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+
+copying serial/urlhandler/protocol_rfc2217.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+
+copying serial/urlhandler/protocol_loop.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+
+copying serial/urlhandler/protocol_hwgrep.py -> build/lib.linux-armv6l-2.7/serial/urlhandler
+
+running build_scripts
+
+creating build/scripts-2.7
+
+copying and adjusting serial/tools/miniterm.py -> build/scripts-2.7
+
+changing mode of build/scripts-2.7/miniterm.py from 644 to 755
+
+running install_lib
+
+creating /usr/local/lib/python2.7/dist-packages/serial
+
+error: could not create '/usr/local/lib/python2.7/dist-packages/serial': Permission denied
+
+----------------------------------------
+Cleaning up...
+  Removing temporary dir /tmp/pip_build_pi...
+Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/pyserial/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-gijo1J-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_pi/pyserial
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/pip-1.5.6-py2.7.egg/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/local/lib/python2.7/dist-packages/pip-1.5.6-py2.7.egg/pip/commands/install.py", line 283, in run
+    requirement_set.install(install_options, global_options, root=options.root_path)
+  File "/usr/local/lib/python2.7/dist-packages/pip-1.5.6-py2.7.egg/pip/req.py", line 1435, in install
+    requirement.install(install_options, global_options, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pip-1.5.6-py2.7.egg/pip/req.py", line 706, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/local/lib/python2.7/dist-packages/pip-1.5.6-py2.7.egg/pip/util.py", line 697, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/pyserial/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-gijo1J-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_pi/pyserial
