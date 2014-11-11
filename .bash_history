@@ -792,3 +792,362 @@ git commit -a
 git push
 ls -altr
 sudo shutdown -h 0
+ls -altr
+cd display
+ls
+cd SSD1306/
+ls
+ls -al
+rm -R .git .gitignore
+rm -Rf .git
+ls -altr
+rm .gitignore 
+cd SSD1306/
+ls
+sudo python test3.py
+cp test3.py test4.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+vi test2.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+sudo python test3.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+sudo python test4.py
+vi test.py
+vi test4.py
+sudo python test4.py
+ls -latr
+sudo python test.py
+sudo python test2.py
+sudo python test3.py
+vi test4.py
+sudo python test4.py
+vi test3.py
+vi test2.py
+vi test4.py
+sudo python test4.py
+python
+ls -altr
+vi test4.py
+sudo python test3.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+sudo python test4.py
+vi test4.py
+sudo python test4.py
+vi test3.py
+vi test2.py
+sudo python test2.py
+vi test2.py
+sudo python test2.py
+vi test2.py
+sudo python test2.py
+ls
+vi SSD1306.py
+cp test2.py test5.py
+vi test5.py
+vi SSD1306.py
+vi test5.py
+sudo python test5.py
+vi SSD1306.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+vi SSD1306.py
+cp test5.py test6.py
+sudo python test.py
+sudo python test2.py
+vi test6.py
+sudo python test6.py
+vi test6.py
+vi SSD1306.py
+vi test6.py
+sudo python test6.py
+vi test6.py
+vi SSD1306.py
+sudo python test6.py
+vi test6.py
+sudo python test6.py
+vi SSD1306.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi SSD1306.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi SSD1306.py
+vi test5.py
+sudo python test5.py
+vi test5.py
+sudo python test5.py
+vi SSD1306.py
+vi test6.py
+cp test6.py test6.py
+cp test6.py test7.py
+vi test7.py
+sudo python test7.py
+vi test7.py
+sudo python test7.py
+vi test7.py
+vi SSD1306.py
+cp test7.py test8.py
+vi test8.py
+sudo python test8.py
+print "scroll speed "i
+python
+vi test8.py
+sudo python test8.py
+vi test8.py
+sudo python test8.py
+vi test8.py
+sudo python test8.py
+sudo python test7.py
+sudo python test6.py
+sudo python test5.py
+ls -altr
+cp test2.py reset.py
+vi reset.py
+sudo python reset.py
+vi SSD1306.py
+cd ..
+ls
+ls -altr
+cd ..
+git commit -a
+cd display
+git commit -a
+ls
+cd SSD1306/
+ls
+git commit -a
+git add .
+git commit -a
+cd ..
+git add SSD1306/
+git commit -a
+ls -al
+git push
+git commit -a SSD1306/
+cd SSD1306/
+ls
+cd 
+cd display/SSD1306/
+cd SSD1306/
+ls
+ls -altr
+git commit -a
+git add *
+cd ..
+ls
+git add *
+git add SSD1306
+ls
+cd ..
+git add SSD1306
+git commit -a
+ls -altr
+cd ..
+git commit -a
+ls -altr
+cd .git
+ls -altr
+more index
+cd ..
+ls -altr
+git add display
+git commit -a
+git add display/SSD1306
+git commit -a
+git commit -m
+git add help
+git add
+git add .
+git commit -a
+ls -al
+git add display
+git commit -a
+git checkin
+git --help
+git status
+git reset
+git add .
+git commit -a
+git diff
+git help
+git init
+git commit -a
+git add .
+git commit -a
+git commit 
+git init
+ls -altr
+git add .
+ls -altr
+touch README.md
+git init
+git add README.md
+git add fernandito
+git add servo
+git add display
+git commit -m "first commit"
+git remote add origin https://github.com/RobertoMD/fernandito.git
+git push -u origin master
+git status
+sudo shutdown -r 0
+sudo shutdown -h 0
+cd display
+cd SSD1306/
+ls
+cd SSD1306/
+ls
+vi t.py
+vi test31.py
+vi test3.py
+vi test31.py
+cd display
+ls -altr
+rm -Rf ArduiPi_SSD1306/
+ls
+cd SSD1306/
+ls
+cd SSD1306/
+ls
+vi SSD1306.py
+sudo python
+vi test2.py
+cp SSD1306.py SSD1306_orig.py
+vi SSD1306.py
+vi test2.py
+vi SSD1306.py
+vi test2.py
+sudo python test2.py
+sudo python reset.py
+vi test3.py
+python
+sudo python test3.py
+sudo python reset.py
+vi test3.py
+cp test3.py test31.py
+vi test31.py
+cat test31.py
+sudo python
+vi t.py
+sudo python
+vi t.py
+python
+notepad t.py
+vi t.py
+python
+vi t.py
+python
+vi t.py
+python
+vi test3.py
+vi t.py
+python
+vi t.py
+python
+python t.py
+python 
+import Image
+import ImageFont
+import ImageDraw
+import time
+w=128
+h=64
+image=Image.new('1',(w,h))
+font=ImageFont.truetype('/usr/share/fonts/truetype/droid/DroidSans.ttf',10)
+draw=ImageDraw.Draw(image)
+text='En mi puerta plante un pino Pensando que me querias Y ahora que ya no me quieres No puedo sacar el carro'
+from t import wrappedtext
+lines=wrappedtext(text,font,image)
+python
+sudo python test31.py
+sudo shutdown -h 0
+ls -altr
+cd display
+ls
+cd SSD1306/
+ls
+cd SSD1306/
+ls
+sudo python test.py
+sudo python test8.py
+sudo python reset.py
+sudo python test6.py
+sudo python test5.py
+sudo python test4.py
+sudo python reset.py
+sudo python test31.py
+sudo shutdown -h now
+i2cdetect
+i2cdetect -y 0
+sudo i2cdetect -y 1
+sudo i2cdetect -y 0
+dir
+ls
+mkdir nrf24l01
+cd nrf24l01/
+dir
+cd ..
+find . -name I2C.py
+cd display/SSD1306/SSD1306/
+ls
+ls -altr
+cp I2C.py ../../../nrf24l01/
+cp GPIO.py ../../../nrf24l01/
+cp DDS1306.py ../../../nrf24l01/
+cp SSD1306.py ../../../nrf24l01/
+cd ..
+cd. .
+cd ..
+cd nrf24l01/
+ls
+vi I2C.py
+vi GPIO.py
+ls
+vi I2C.py
+ls
+vi SSD1306.py 
+sudo python
+cd nrf24l01/
+ls
+more I2C.py
+sudo shutdown -h 0
+ls
+cd cd nrf24l01/
+ls
+cd nrf24l01/
+ls .atr
+ls -altr
+cd ..
+ls
+cd pi
+ls -altr
+cd nrf24l01/
+ls -altr
+more I2C.py
+sudo python
+ls 
+vi I2C.py
+d.write8(0x23,1)
+sudo python 
+sudo shutdown -h 0
