@@ -1151,3 +1151,594 @@ vi I2C.py
 d.write8(0x23,1)
 sudo python 
 sudo shutdown -h 0
+ls
+cd nrf24l01/
+ls
+sudo python
+ls -altr
+vi I2C.py
+find / -name smbus.py
+sudo find / -name smbus.py
+sudo find / -name smbus.pyc
+sudo find / -name smbus.*
+man smbus
+cd /usr/lib/python2.7
+cd dist-packages/
+ls
+ls -altr
+more smbus-1.1.egg-info 
+ld -d smbus.so
+nm smbus.so
+cd ../../../share/pyshared
+ls -altr
+more smbus-1.1.egg-info 
+i2cset
+i2cset -y 1 0x23 23
+sudo i2cset -y 1 0x23 23
+ls /dev
+sudo python
+more /usr/include/linux/i2c-dev.h 
+sudo python
+cd 
+cd nrf24l01/
+sudo python
+vi send10.py
+sudo python send10.pyp
+sudo python send10.py
+vi send10.py
+sudo python send10.py
+ls
+cat send10.py
+vi send10.py
+sudo python send10.py
+vi send10.py
+sudo python send10.py
+vi send10.py 
+mv send10.py send.py
+sudo python send
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+more send.py
+vi send.py
+cd ..
+git commit -a
+git push
+ls
+cd nrf24l01/
+git commit -a
+cd ..
+git commit -a
+git add nrf24l01
+git commit -a
+git push
+sudo shutdown -h 0
+cd servo
+ls -altr
+sudo python
+sudo i2cdetect -y 1
+ls -altr
+cd servo
+ls
+vi i2c.py
+ls
+vi servo.py
+sudo i2cdetect -y 1
+sudo python
+cd ..
+sl
+ls
+mkdir adda
+cp nrf24l01/I2C.py adda
+cd nrf24l01/
+sudo python
+ls
+cd ..
+ls
+cd adda
+ls
+sudo shutdow -h 0
+sudo shutdown -h 0
+cd nrf24l01/
+ls -altr
+vi Wireless.py
+cat I2C.py
+ls
+cp I2C.py Wireless.py
+vi Wireless.py 
+ls
+more send.py
+vi Wireless.py
+ls
+cat send.py
+vi Wireless.py
+ls
+cd nrf24l01/
+ls
+cat send.py
+sudo python 
+sudo i2cdetect -y 1
+sudo python 
+sudo modprobe -r i2c_bcm2708
+sudo python
+i2cget
+i2cset -y 1 0x23 0x10
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+i2cdump 1 0x23
+sudo i2cdump 1 0x23
+sudo dmesg
+sudo i2cinit
+sudo i2cdump 1 0x23
+sudo i2cget -y 1 0x23 0
+sudo i2cget -y 1 
+sudo i2cget -y 1 0x23 b
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x11
+sudo i2cget -y 1 0x23
+sudo i2cget -y 1 0x23 0x11
+sudo shutdown -r 0
+sudo i2cset 1 0x23 0x11
+sudo i2cget 1 0x23
+sudo i2cdump
+sudo i2cdump -y 1 0x23 b 
+i2cset -y 1 0x23 0x10
+sudo i2cset -y 1 0x23 0x10
+i2cget -y 1 0x23
+sudo i2cget -y 1 0x23
+sudo dmesg
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo shutdown -h 0
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+wget http://www.hobbytronics.co.uk/download/rpi_i2c.zip
+dir
+mv rpi_i2c.zip  nrf24l01/
+cd nrf24l01/
+ls
+unzip rpi_i2c.zip 
+sudo ./i2c_slow
+ls -altr
+chmod 755 i2c_slow
+chmod 755 i2c_fast
+sudo ./i2c_slow
+i2cset -y 1 0x23 0x10
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo ./i2c_fast
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cdetect -y 1
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cdetect -y 1
+sudo i2cget -y 1 0x23
+sudo i2cset -y 1 0x23 0x10
+sudo i2cget -y 1 0x23
+sudo shutdown -h 0
+ls -altr
+cd nrf24l01/
+ls
+ls -a.tr
+ls -altr
+cd ..
+mv nrf24l01/ nrf24l01.i2c
+mkdir nrf24l01
+cd nrf24l01
+sudo vi /etc/modprobe.d/raspi-blacklist.conf 
+ls /dev
+git clone https://github.com/tmrh20/RF24.git rtemp
+ls -altr
+cd rtemp
+ls -altr
+more README.md
+ls -altr
+more README.md 
+ls -altr
+vi RF24.h
+ls
+ls -altr
+more FAQ
+ls- latr
+ls -altr
+vi RF24.cpp
+sudo shutdown -h 0
+ls -altr
+cd nrf24l01
+ls
+rm -R rtemp
+ls
+git clone https://github.com/jonathongrigg/RF24.git
+ls -altr
+cd RF24
+ls
+cd ..
+rm -Rf RF24
+git clone https://github.com/jpbarraca/pynrf24.git
+ls
+cd pynrf24/
+ls
+more nrf24.py 
+ls
+more README.md 
+ls
+cd examples
+cd ..
+cd spi
+ls
+ls -altr
+more README.md 
+cd ..
+ls
+cd examples
+ls
+more send.py
+sudo python
+cd ..
+ls
+sudo pyhton
+sudo python
+ls
+cd ..
+cd .
+cd ..
+ls
+ls display
+ls display/SSD1306/
+ls display/SSD1306/SSD1306/
+cp display/SSD1306/SSD1306/GPIO.py nrf24l01/pynrf24/
+cd nrf24l01
+cd pynrf24/
+ls
+vi nrf24.py
+sudo python
+ls
+cat examples/send.py 
+sudo python
+sudo lsmod
+ls -al
+cd spi
+ls
+cd ..
+mkdir python-spi
+cd python-spi
+mkdir python-spi
+cd python-spi
+cd ..
+rd python-spi/
+rmdir python-spi/
+ls
+wget https://raw.github.com/doceme/py-spidev/master/setup.py
+wget https://raw.github.com/doceme/py-spidev/master/spidev_module.c
+ls -al
+more setup.py 
+ls
+more spidev_module.c 
+sudo python setup.py install
+vi spidev_module.c 
+ls
+more setup.py 
+find /usr/include
+find /usr/include -name Python.h
+sudo python setup.py install
+sudo apt-get install python-dev
+sudo apt-get update
+sudo apt-get install python-dev
+ls
+sudo python setup
+ls
+sudo python setup.py
+sudo python setup.py install
+sudo python 
+cd ..
+ls
+cat examples/send.py 
+sudo python
+ls
+vi nrf24.py
+ls
+vi nrf24.py
+sudo python
+grep P9_15 *
+vi nrf24.py
+ls
+more GPIO.py
+ls
+vi GPIO.py
+cat examples/send.py
+sudo python
+ls
+vi nrf24.py
+grep "The channel sent is invalid on a Raspberry Pi" *
+vi +373 nrf24.py
+sudo python
+cat examples/send.py 
+sudo python
+copy examples/send.py .
+cp examples/send.py .
+vi send.py 
+cat send.py
+sudo python
+vi send.py
+cat send.py
+sudo python send.py
+vi send.py
+ls -al /dev/
+ls
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+ls -altr
+cat send.py
+sudo python
+ls -al /dev
+ls-
+cat send.py
+sudo python
+ls -al /dev/spi*.*
+man -k node
+man -k major
+man major
+man stat
+stat /dev/spidev0.0
+man stat
+stat /dev/spidev0.0
+sudo stat /dev/spidev0.0
+sudo stat /dev/spidev0.1
+man major
+man stat
+sudo stat --file-system /dev/spidev0.1
+ls -altr
+vi send.py
+cat send.py
+sudo python
+ls -altr
+notepad send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+vi send.py
+vi examples/recv.py 
+vi send.py
+sudo python send.py
+ls -altr
+vi send.py
+sudo python send.py
+vi send.py
+sudo python send.py
+ls /dev
+ls -altr
+vi send.py
+ls -altr
+sudo python send.py
+sudo shutdown -h 0
+ls -altr
+cd nrf24l01
+ls
+ls -altr
+cd pynrf24/
+ls
+ls -altr
+cat send.py
+sudo  shutdown -h 0
+ls altr
+ls -altr
+cd nrf24l01
+ls
+cd pynrf24/
+ls
+cat send.py
+sudo python
+ls -altr
+more send.py
+sudo python
+vi send.py
+python
+vi send.py
+python
+vi send.py
+cat send.py
+vi send.py
+cat send.py
+sudo python
+vi send.py
+sudo python
+cat send.py
+sudo python
+vi send.py
+ls
+vi nrf24.py
+cat send.py
+import RPi.GPIO as GPIO
+from nrf24 import NRF24
+import time,random
+GPIO.setmode(GPIO.BOARD)
+GPIO.cleanup() pipe=0x0101010101
+sudo python
+ls
+vi nrf24.py
+ls /dev/spidev0.*
+ls -altr /dev/spidev0.*
+cat /dev/spidev0.0
+vi nrf24.py
+vi send.py
+cat send.py
+import RPi.GPIO as GPIO
+from nrf24 import NRF24
+import time,random
+GPIO.setmode(GPIO.BOARD)
+GPIO.cleanup() pipes = [[0x31, 0x31, 0x31, 0x31, 0x31], [0x32, 0x32, 0x32, 0x32, 0x32]]
+pipe=0x0101010101
+radio = NRF24()
+radio.begin(0, 0, 12, 26)
+radio.setRetries(15,15)
+radio.setPayloadSize(1)
+#radio.setChannel(0x60)
+#radio.setDataRate(NRF24.BR_250KBPS)
+#radio.setPALevel(NRF24.PA_MAX)
+radio.openWritingPipe(pipes[0])
+#radio.openReadingPipe(1, pipes[1])
+#radio.startListening()
+#radio.stopListening()
+radio.printDetails()
+sudo python
+sudo shutdown -h 0
+ls -atlr
+ls
+ls -altr
+cd nrf24l01
+ls
+ls -altr
+cd pynrf24/
+ls
+ls -altr
+vi send.py
+grep P9 *
+vi README.md
+cat send.py
+sudo python
+vi send.py
+cat send.py
+sudo python
+ls -altr
+cd .git
+ls
+more HeAD
+more HEAD
+more index
+cd ..
+more README.md
+ls -altr
+cp nrf24.py nrf24.py.orig
+vi nrf24.py
+vi send.py
+cat send.py
+sudo python
+ls
+vi nrf24.py
+cat send.py
+sudo python
+ls 
+vi nrf24.py
+vi nrf24.py.orig 
+vi nrf24.py
+cat send.py
+sudo python
+vi nrf24.py
+nrf24
+cat send.py
+sudo python
+vi nrf24.py
+sudo python
+vi send.py
+sudo python
+vi send.py
+sudo python
+vi send.py
+sudo python
+vi nrf24.py
+sudo python
+vi send.py
+sudo python
+shutdown -h 0
+sudo shutdown -h 0
+ls
+cd nrf24l01
+ls -latr
+cd pynrf24/
+ls -altr
+vi send.py
+cat send.py
+sudo python
+sudo shutdown -h 0
+cd nrf24l01
+ls
+cd pynrf24/
+ls
+vi send.py
+cat send.py
+sudo python
+vi send.py
+sudo python
+vi send.py
+cat send.py
+from send import *
+sudo python
+ls -altr
+vi nrf24.py
+cat send.py
+sudo python
+vi send.py
+cat send.py
+sudo python
+vi send.py
+cat send.py
+sudo python
+cat send.py
+vi send.py
+sudo python
+vi nrf24.py
+sudo python
+vi nrf24.py
+sudo python
+vi send.py
+sudo python
+vi send.py
+cat send.py
+sudo python
+cat send.py
+sudo python
+vi send.py
+cat send.py
+sudo python
+sudo shutdown -h 0
