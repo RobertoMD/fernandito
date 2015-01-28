@@ -13,6 +13,7 @@ pipe_w=0xe7e7e7e7e7
 CMD_PING='P'
 CMD_TEMP='T'
 CMD_RANDOM='R'
+CMD_VERBOSE='V'
 
 radio = NRF24()
 radio.begin(0, 0, 12)
@@ -24,7 +25,7 @@ radio.enableDynamicPayloads()
 radio.setAutoAck(True)
 
 radio.setDataRate(NRF24.BR_1MBPS)
-radio.setPALevel(NRF24.PA_HIGH)
+radio.setPALevel(NRF24.PA_MAX)
 
 radio.openWritingPipe(pipe_w)
 radio.openReadingPipe(1, pipe_r)
@@ -33,20 +34,6 @@ radio.startListening()
 radio.stopListening()
 
 radio.printDetails()
-
-#while True:
-#	buf = [random.randint(10,20)]
-#    radio.write(buf)
-#    time.sleep(1)
-
-# read
-# definir RecvPayload como un array de 32 bytes.
-#if (radio.available()):
-	#done=false
-	#while (!done):
-		#len=radio.getDynamicPayloadSize();
-		#done=radio.read(&RecvPayload,len);
-	# terminar con un cero el array
 
 def send(radio,msg):
 	radio.stopListening()
