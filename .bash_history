@@ -1742,3 +1742,109 @@ vi send.py
 cat send.py
 sudo python
 sudo shutdown -h 0
+ls -altr
+cd nrf24l01
+sl
+ls
+cd pynrf24/
+s
+ls
+vi send.py
+cat send.y
+cat send.py
+sudo python
+ls -altr
+cp send.py radio.py
+vi radio.py
+cat radio.py
+sudo python
+ls -altr
+vi radio.py
+cat radio.py
+sudo python
+vi radio.py
+cat radio.py
+sudo python
+ls
+vi radio.py
+cd ..
+ls
+pwd
+cd ..
+ls
+git commit -a
+cd nrf24l01
+git commit -a
+ls
+git add pynrf24/radio.py
+git commit -a
+git push
+ls
+cd pynrf24/
+ls
+cd ..
+cd pynrf24/
+git add radio.py
+git commit -a
+git push
+ls -altr
+cd .git
+ls
+cd refs
+ls
+cd heads
+ls
+cat master 
+cd ..
+ls
+cd ..
+ls -altr
+cd ..
+git push
+sudo shutdown -h 0
+ls -altr
+cd nrf24l01
+ls
+cd pynrf24/
+ls -altr
+cat radio.py
+vi radio.py
+sudo python
+vi radio.py
+ls -altr
+cat radio.py
+sudo python
+vi radio.py
+sudo python
+git commit -a
+git push
+ls -altr
+ftp raspi
+sudo ftp
+ls -altr
+cat radio.py
+more radio.py
+ls
+ls -altr
+vi radio.py
+vi nrf24.py
+ls
+sudo shutdown -h 0
+cd nrf24l01
+ls
+cd pynrf24/
+ls
+cat radio.py
+sudo python
+vi radio.py
+sudo python
+vi radio.py
+sudo python
+vi radio.py
+sudo python
+vi radio.py
+sudo python
+ls -altr
+vi radio.py
+sudo python
+sudo shutdown -h 0
